@@ -1,4 +1,7 @@
 class Show < ActiveRecord::Base 
-  Show.maximum()
+  
+  def self.highest_rating
+    self.maximum(:rating)
+  end 
   
 end 
