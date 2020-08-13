@@ -5,7 +5,7 @@ class Show < ActiveRecord::Base
   end 
   
   def self.most_popular_show
-    self.order(:rating).first
+    self.where(":rating > ?", 9)
   end 
   
 end 
